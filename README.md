@@ -22,7 +22,7 @@ The abacusMMM package (built using [Numpyro](https://github.com/pyro-ppl/numpyro
 
 ### Simplified Model Overview
 
-An MMM quantifies the relationship between media channel activity  and sales, while controlling for other factors. A simplified model overview is shown below and the full model is set out in the [model documentation](https://abacus-mmm.readthedocs.io/en/latest/models.html). An MMM is typically run using weekly level observations (e.g. the KPI could be sales per week), however, it can also be run at the daily level.
+An MMM quantifies the relationship between media channel activity  and sales, while controlling for other factors. A simplified model overview is shown below and the full model is set out in the [model documentation](https://lightweight-mmm.readthedocs.io/en/latest/models.html). An MMM is typically run using weekly level observations (e.g. the KPI could be sales per week), however, it can also be run at the daily level.
 
 $$kpi = \alpha + trend + seasonality + media\ channels + other\ factors$$
 
@@ -149,7 +149,7 @@ mmm.fit(media=media_data,
         custom_priors=custom_priors)
 ```
 
-Please refer to our [documentation on custom_priors](https://abacus-mmm.readthedocs.io/en/latest/custom_priors.html)
+Please refer to our [documentation on custom_priors](https://lightweight-mmm.readthedocs.io/en/latest/custom_priors.html)
 for more details.
 
 You can switch between daily and weekly data by enabling
