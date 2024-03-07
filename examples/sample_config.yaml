@@ -1,0 +1,100 @@
+################################
+# abacus MMM options
+################################
+
+# Library to use: at present only abacus_mmm is supported
+library: abacus_mmm
+
+# "model name" is the abacus_mmm option for how to compute adstock
+# (i.e. how much effect an ad has over time, as someone's memory fades)
+# Values: carryover, adstock, hill_adstock
+model_name: carryover
+
+# These abacus_mmm options determine how many samples to take from the
+# Markov chain Monte Carlo process; higher values mean slower runtime.
+number_warmup: 1000
+number_samples: 1000
+number_chains: 2
+
+# These abacus_mmm options specify how to handle seasonality: the expected
+# number of degrees of freedom, and whether to separately model intra-week variation.
+degrees_seasonality: 2
+weekday_seasonality: null
+
+# Fixed seed for MCMC process: set this if subsequent runs need to
+# have exactly the same results. If not set, this defaults to a
+# seed generated with get_time_seed() in abacus_mmm.
+# seed: 1
+
+# Custom priors: use this to guide the model based on what you already know
+# about the range of possible values for a parameter (typically after running
+# many MMMs and/or many experiments).
+# This example sets a prior for the baseline trend coefficient to a normal
+# distribution with mean 0 and stddev 1 (same as abacus_mmm's default).
+# custom_priors:
+#   coef_trend:
+#     type: normal
+#     loc: 0
+#     scale: 1
+
+################################
+# Data handling options
+################################
+
+# Experimental feature.  Leave as false for now.
+log_scale_target: false
+
+# Frequency of the input data (required)
+# Values: daily, weekly
+raw_data_granularity: daily
+
+# Specify the expected total number of rows in the CSV input (optional),
+# and the range of dates to use from the input data (required)
+data_rows:
+  total: 117
+  start_date: 2023-01-01
+  end_date: 2023-04-27
+
+# Proportion of the dataset to use for training (in-sample), with the remainder
+# used for an out-of-sample test. Defaults to 90% train, 10% test.
+train_test_ratio: 0.9
+
+################################
+# Column definitions
+################################
+
+# Column names from the input to be ignored (optional).
+# All columns in the input data should be listed somewhere in this file,
+# so use this field when testing out which columns to include.
+# ignore_cols:
+#   - "Unwanted Column"
+
+# Column name for the date index of each row (optional,
+# case-sensitive; defaults to lowercase "date").
+# Values in this column must be ISO 8601 format (YYYY-MM-DD).
+# date_col: date
+
+# Column name for the target or output metric (e.g. number of leads, sales volume)
+# that we want to increase with marketing spend (required).
+target_col: kpi
+
+# Column names for "extra features", i.e. factors external to
+# marketing that influence the target metric (optional).
+extra_features_cols:
+  - extra_feature_1
+
+# Required: each block under "media" represents an advertising channel,
+# defined by a display name (used in charts), a column name for
+# impressions data, and a column name for cost data.
+media:
+  - display_name: Ad Platform 1
+    impressions_col: media_1_impressions
+    spend_col: media_1_cost
+
+  - display_name: Ad Platform 2
+    impressions_col: media_2_impressions
+    spend_col: media_2_cost
+
+  - display_name: Ad Platform 3
+    impressions_col: media_3_impressions
+    spend_col: media_3_cost
