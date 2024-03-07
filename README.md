@@ -1,5 +1,3 @@
-<img align="left" width="120" height="120" src="https://raw.githubusercontent.com/google/abacus_mmm/main/images/abacus_mmm_logo_colored_250.png" alt="abacus_mmm_logo_colored_250"></img>
-
 # Abacus
 ### A python library that helps organisations understand and optimise marketing spend across media channels. Abacus is a fork of LightweightMMM, with a few modifications.
 
