@@ -9,12 +9,13 @@ sphinx:
   builder: html
   configuration: docs/conf.py
   fail_on_warning: false
+formats:
+  - htmlzip
+  - pdf
+  - epub
 python:
   install:
     - requirements: requirements/requirements_docs.txt
     - requirements: requirements/requirements.txt
     - method: setuptools
       path: .
-# Optionally build your docs in additional formats such as PDF and ePub
-# formats:
-    - pdf
