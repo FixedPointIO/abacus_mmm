@@ -18,8 +18,14 @@ If you want to use the most recent version you can install it from github:
 ``pip install --upgrade git+https://github.com/FixedPointIO/abacus_mmm.git``
 
 .. toctree::
-   :caption: Model Documentation
-   :maxdepth: 1
+   :caption: Overview
+   :maxdepth: 2
+
+   abacus
+
+.. toctree::
+   :caption: Detailed Model Documentation
+   :maxdepth: 2
 
    models
 
