@@ -8,9 +8,9 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'abacus_mmm'
+project = 'Abacus MMM'
 copyright = '2024, The abacus_mmm authors'
-author = 'The abacus_mmm authors'
+author = 'Charles Shaw'
 
 
 # -- General configuration ---------------------------------------------------
