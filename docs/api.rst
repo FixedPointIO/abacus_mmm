@@ -1,15 +1,15 @@
-abacusMMM
+abacus_mmm
 ===============
 .. currentmodule:: abacus_mmm
 
 
-abacusMMM object
+abacus_mmm object
 ======================
 .. currentmodule:: abacus_mmm.abacus_mmm
 .. autosummary::
-      abacusMMM
+      abacus_mmm
 
-.. autoclass:: abacusMMM
+.. autoclass:: abacus_mmm
     :members:
 
 
