@@ -1,7 +1,7 @@
 :github_url: https://github.com/FixedPointIO/abacus_mmm/tree/main/docs
 
 abacus_mmm Documentation
-===================
+========================
 
 abacus_mmm is a lightweight Bayesian Marketing Mix Modeling (MMM) 
 library that allows users to easily train MMMs and obtain channel attribution 
@@ -17,7 +17,6 @@ If you want to use the most recent version you can install it from github:
 
 ``pip install --upgrade git+https://github.com/FixedPointIO/abacus_mmm.git``
 
-
 .. toctree::
    :caption: Model Documentation
    :maxdepth: 1
@@ -25,7 +24,7 @@ If you want to use the most recent version you can install it from github:
    models
 
 .. toctree::
-   :caption: Custom priors
+   :caption: Custom Priors
    :maxdepth: 1
 
    custom_priors
@@ -35,6 +34,13 @@ If you want to use the most recent version you can install it from github:
    :maxdepth: 2
 
    api
+
+.. toctree::
+   :caption: Additional Resources
+   :maxdepth: 2
+
+   results.md
+   config.md
 
 .. toctree::
    :caption: FAQ
@@ -53,11 +59,6 @@ Support
 
 If you are having issues, please let us know by filing an issue on our
 `issue tracker <https://github.com/FixedPointIO/abacus_mmm/issues>`_.
-
-License
--------
-
-LightweightMMM is licensed under the Apache 2.0 License.
 
 Indices and tables
 ==================
