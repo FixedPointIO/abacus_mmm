@@ -1,21 +1,19 @@
 :github_url: https://github.com/FixedPointIO/abacus_mmm/tree/main/docs
 
-abacus_mmm Documentation
+Abacus MMM Documentation
 ========================
 
-abacus_mmm is a lightweight Bayesian Marketing Mix Modeling (MMM) 
-library that allows users to easily train MMMs and obtain channel attribution 
-information. The library also includes capabilities for optimizing media 
-allocation as well as plotting common graphs in the field.
+ABACUS enhances the utility of open-source MMM (Marketing Mix Modeling) libraries by simplifying the process of MMM analyses.
+
+ABACUS builds on the Lightweight MMM library, incorporating its advanced features for modern media data analysis. Future updates will include support for additional libraries as required. ABACUS strives to incorporate the most efficient design patterns from libraries like Robyn and PyMC. Despite their contributions, these libraries do not always offer a practical solution for MMM analytics. ABACUS seeks to bridge this gap.
+
+It allows users to:
+
+- Conduct MMM analyses easily using a standard CSV file.
+- Start with standardized defaults while offering customization options.
+- Produce various plots, organized in timestamped folders for easy access.
 
 It is built in python3 and makes use of Numpyro and JAX.
-
-Installation
-------------
-
-If you want to use the most recent version you can install it from github:
-
-``pip install --upgrade git+https://github.com/FixedPointIO/abacus_mmm.git``
 
 .. toctree::
    :caption: Overview
